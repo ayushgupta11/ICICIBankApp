@@ -57,12 +57,8 @@ export default class OTP extends Component {
                     />
                 </View>
 
-                <View>
-                    {/* On press handler need to be modified by directing it to the next page */}
-                    <Button style={styles.btn} title="Verify" onPress={() => {
-                        Alert.alert('verified');
-                        this.props.navigation.navigate('Dashboard')
-                    }} />
+                <View style={styles.parent}>
+                    <Button title='Submit' onPress={() => this.props.navigation.navigate('SetPin') } />
                 </View>
             </View>
         );
@@ -102,5 +98,10 @@ let styles = StyleSheet.create({
         borderWidth: 0.5,
         borderColor: "grey",
         margin: '2.5%'
+    },
+    parent: {
+        width: 300,
+        backgroundColor: 'red',
+        margin: 50,
     }
 });

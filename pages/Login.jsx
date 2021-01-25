@@ -19,16 +19,16 @@ export default function Login({ navigation }) {
                 <View style={styles.button}>
                     <Button title='login' onPress={() => navigation.navigate('Dashboard') } />
                 </View>
-                <View style={styles.row}>
+                <View>
                     <Text>Don't have an account?</Text>
-                    <TouchableOpacity>
-                        <Text style={styles.link}>Sign Up</Text>
+                    <TouchableOpacity onPress={() => navigation.navigate('FirstScreen') }>
+                        <Text style={styles.link }>Signup</Text>
                     </TouchableOpacity>
                 </View>
-                <View style={{ display: 'flex', marginTop: 20, alignItems: 'center' }}>
+                {/* <View style={{ display: 'flex', marginTop: 20, alignItems: 'center' }}>
                     <Text style={{ marginBottom: 10 }}>OR</Text>
                     <Button title='Sign in using OTP' onPress={() => navigation.navigate('OTP') } />
-                </View>
+                </View> */}
             </View>
     )
 }
@@ -47,6 +47,7 @@ const styles = StyleSheet.create({
     link: {
       color: 'blue',
       fontWeight: 'bold',
+      textAlign: 'center'
     }, 
     image: {
       width: 90,
